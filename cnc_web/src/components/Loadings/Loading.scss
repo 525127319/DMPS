@@ -1,0 +1,72 @@
+.mc{
+    // width: 100%;
+    // height: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 61px;
+    left: 20px;
+    right: 20px;
+    bottom: 73px;
+    z-index: 111;
+    background-color: #f4f4f4;
+}
+.mc p{
+    width: 100px;
+    position: absolute;	
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: -40px;
+}
+.mc p i {
+    display: block;		
+    width: 10px;
+    float: left;
+    height: 80px;
+    background-color: #fff;
+    margin-left: 5px;
+    transform: scaleY(0.4);
+    -webkit-animation:wd 1.2s infinite;
+    animation: wd 1.2s infinite;
+}
+.mc p i:nth-child(2){
+    animation-delay: 0.1s;
+}
+.mc p i:nth-child(3){
+    animation-delay: 0.2s;
+}
+.mc p i:nth-child(4){
+    animation-delay: 0.3s;
+}	
+.mc p i:nth-child(5){
+    animation-delay: 0.4s;
+}					
+@keyframes wd{
+    0%,20%,100%{
+        transform: scaleY(0.4);
+    }
+    40%{
+        transform: scaleY(1);
+    }
+}
+// .next-loading.loading .next-loading-component{
+//     background-color: #f4f4f4;
+// }
+// // .next-loading.loading{
+// //    pointer-events: auto;
+// // }
+// .next-loading{
+//     position: absolute;
+//     z-index: 99;
+//     top: 62px;
+//     left: 20px;
+//     right: 20px;
+//     bottom: 73px;
+// }
+// .next-loading.loading .next-loading-component{
+//     width: 100%;
+//     height: 100%;
+//     opacity:1;
+// }

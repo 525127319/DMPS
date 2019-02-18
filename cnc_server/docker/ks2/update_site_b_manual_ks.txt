@@ -1,0 +1,79 @@
+1. 
+rm -rf /home/app/dms
+mkdir -p /home/app/dms
+cd /home/app/dms
+git clone  -b dev http://ray:ray123456@code-iacloud.ceway.com.cn/scm/foreend/cnc_server.git
+cd ./cnc_server
+
+
+2. imcloud_dms_dev:v1
+
+FROM java:8
+
+RUN java -version
+
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ADD ./docker/dms-0.0.2.jar /node-sidecar.jar
+RUN bash -c 'touch /node-sidecar.jar'
+
+RUN apt-get install -y unzip
+
+ADD ./docker/node8.zip /node8.zip
+RUN unzip node8.zip
+RUN ln -s /node8/bin/node /usr/local/bin/node
+
+ADD ./docker/yarn.zip /yarn.zip
+RUN unzip yarn.zip
+RUN ln -s /yarn/bin/yarn /usr/local/bin/yarn
+RUN ln -s /yarn/bin/yarnpkg /usr/local/bin/yarnpkg
+
+RUN node -v & yarn -v
+
+RUN mkdir -p /opt/cnc_server
+COPY .  /opt/cnc_server
+WORKDIR /opt/cnc_server
+RUN rm -rf app.js & rm -rf config/DBConfig.js & rm -rf config/WSConfig.js
+RUN cp docker/app.js -rf ./
+RUN cp docker/ulmt/DBConfig.js -rf ./config/
+RUN cp docker/ulmt/WSConfig.js -rf ./config/
+
+RUN yarn --registry https://registry.npm.taobao.org
+
+COPY ./docker/start.sh /opt
+
+RUN ["chmod", "+x", "/opt/start.sh"]
+CMD /bin/bash /opt/start.sh
+
+
+docker build -t imcloud_dms_dev:v1 .
+
+
+3. 
+cd ./cnc_server/docker/ks
+
+docker stack deploy -c  docker-compose-dms-dev.yml imcloud-dms-dev
+
+4. web
+git clone  -b dev http://ray:ray123456@code-iacloud.ceway.com.cn/scm/foreend/cnc_web.git
+
+cd cnc_web/
+\cp ./docker/ks/AxiosHttp.js ./src/utils/
+
+
+wget https://nodejs.org/dist/v8.11.0/node-v8.11.0-linux-x64.tar.gz
+
+mv node-v8.11.0-linux-x64 node
+vi /etc/profile
+export NODE_HOME=/usr/local/node
+export PATH=$NODE_HOME/bin:$PATH
+source /etc/profile
+
+
+npm --registry https://registry.npm.taobao.org install
+node ./docker/UpdateDay.js 
+npm run build
+node ./docker/UpdateBuild.js
+cd ./build
+\cp * -rf /opt/nginx/dms_dev/
+service nginx restart

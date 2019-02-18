@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ks-dms-shift:
+    image: docker-registry.imcloudep.com/imcloud_dms_shift:v1
+    restart: always
+    environment:
+      - EUREKA_SERVER_ADDRESS=core-eureka
+    volumes:
+      - /mnt/cnc_server/logs:/opt/cnc_server/logs
+
+  # mongodb:
+  #     image: mongo
+  #     ports:
+  #       - "27017:27017"
+  #     volumes:
+  #       - /data/db:/data/db
+  #       - /data/configdb:/data/configdb
+networks:
+  default:
+    external:
+      name: imcloudep-overlay

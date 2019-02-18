@@ -1,0 +1,54 @@
+.statusIdle{
+    background-color:#efc608 !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusWaitingMaterial{
+    background-color:#efc608 !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusUpAndDownMaterial{
+    background-color:#FFA500 !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusRun{
+    background-color:#2cc760 !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusAlarm{
+    background-color:#ea0c32 !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusToolChangerAlarm{
+    background-color:#FFC0CB !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusFirstPieceAlarm{
+    background-color:#FF33CC !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusUnunited{
+    background-color:#7c7c7c !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusUnknown{
+    background-color:#CD661D !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+.statusDebug{
+    background-color:blue !important;
+    color:#fff !important;
+    border-color: transparent;
+}
+
+.next-table td .next-table-cell-wrapper {
+    padding: 8px 12px;
+}

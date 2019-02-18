@@ -1,0 +1,13 @@
+var router = require("koa-router")();
+var deviceController = require("./DeviceController");
+router.get("/device/list/:pageIndex", deviceController.list);
+router.post("/device/create", deviceController.create);
+router.post("/device/update", deviceController.update);
+router.post("/device/delete/:pageIndex/:id", deviceController.delete);
+router.get("/device/devicesum", deviceController.devicesum);
+router.post("/device/listInfo", deviceController.listInfo);
+router.post("/device/search", deviceController.search);
+router.post("/getDepartmentDevice/getDevice", deviceController.getDevice);
+router.post("/getDepartmentDevice/getDptData", deviceController.getDptData);
+router.get("/device/devicesumPage/:pageIndex", deviceController.devicesumPage);
+module.exports = router;

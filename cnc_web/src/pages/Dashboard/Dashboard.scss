@@ -1,0 +1,106 @@
+            // @font-face {
+            //     font-family: "sketchRockWell";
+            //     src: url(./../../../public/fonts/BIG_NOODLE_TITLING.TTF);
+            // }
+            .ice-layout-main .dashboard-page {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                border-radius: 6px;
+                color: rgba(0, 0, 0, 0.87);
+                .panel-header {
+                    position: relative;
+                    height: 100px;
+                    border-radius: 6px;
+                    padding: 0 32px;
+                    display: flex;
+                    margin-bottom: 20px;
+                    background-color: #fff;
+                    &>ul {
+                        position: relative;
+                        display: flex; // justify-content: center;
+                        height: 100%;
+                        margin-right: 48px;
+                        li {
+                            position: relative;
+                            background-color: #fff;
+                            margin: 16px 8px;
+                            padding: 0 16px;
+                            min-width: 160px;
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            border-radius: 4px;
+                            .text {
+                                font-size: 16px;
+                                margin: 0;
+                            }
+                            .val {
+                                flex: 1;
+                                font-size: 48px;
+                                margin: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #0089ff;
+                                &.green {
+                                    color: #10e70b;
+                                }
+                                &.red {
+                                    color: #ff4858;
+                                }
+                                &.yellow {
+                                    color: #ff9800;
+                                }
+                                &.rgay {
+                                    color: gray;
+                                }
+                            }
+                        }
+                    }
+                }
+                .panel-body {
+                    position: relative; // background-color: #122b41;
+                    border-radius: 6px;
+                    flex: 1;
+                    padding: 0 32px;
+                    overflow: hidden;
+                    background-color: #fff;
+                    .table-title {
+                        text-align: center;
+                        font-size: 28px;
+                        margin: 0;
+                        height: 64px;
+                        line-height: 64px;
+                    }
+                    .alarm-list {
+                        position: relative;
+                        border-collapse: collapse;
+                        width: 100%;
+                        text-align: left;
+                        // table-layout: fixed;
+                        th {
+                            color: #999999;
+                            font-weight: normal;
+                        }
+                        th,
+                        td {
+                            position: relative;
+                            height: 50px;
+                            padding: 0 16px;
+                            // width: 20%;
+                        }
+                        tr {
+                            border-bottom: 1px solid #EEEFF3;
+                        }
+                        tbody {
+                            tr:hover {
+                                background-color: #F4F4F4;
+                            }
+                        }
+                    }
+                }
+            }

@@ -1,0 +1,21 @@
+FROM docker.io/node
+
+RUN mkdir -p /opt/cnc_server
+COPY ./api  /opt/cnc_server/api
+COPY ./bin  /opt/cnc_server/bin
+COPY ./common  /opt/cnc_server/common
+COPY ./config  /opt/cnc_server/config
+COPY ./db  /opt/cnc_server/db
+COPY ./ipc  /opt/cnc_server/ipc
+COPY ./services  /opt/cnc_server/services
+COPY ./utils  /opt/cnc_server/utils
+COPY ./app.js  /opt/cnc_server/app.js
+COPY ./package.json  /opt/cnc_server/package.json
+COPY ./webpack.config.js  /opt/cnc_server/webpack.config.js
+COPY ./docker/k8s/DBConfig.js /opt/cnc_server/config/DBConfig.js
+
+WORKDIR /opt/cnc_server
+
+RUN npm install
+
+CMD [ "npm", "start" ]

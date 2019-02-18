@@ -1,0 +1,34 @@
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+    form {
+        position: relative;
+        display: flex;
+        .next-form-item{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.program-table{
+    position: relative;
+    width: 640px;
+}
+.next-dialog{
+    .next-pagination{
+        padding: 16px 0;
+        display: flex;
+        justify-content:center;
+    }
+}
+.confirm{
+    position: relative;
+    width: 320px;
+        .next-dialog-close{
+            display: none;
+        }
+        
+}

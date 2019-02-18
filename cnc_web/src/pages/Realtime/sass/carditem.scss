@@ -1,0 +1,205 @@
+
+.card-body {
+    padding: 0 !important;
+    .next-row {
+        padding: 10px;
+    } // 头部
+    .data-top {
+        border-radius: 4px;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.15);
+            span {
+                // color: #fff;
+            }
+        }
+    }
+    .active{
+        background: #ccc;
+    }
+}
+
+.cnc-item {
+    position: relative;
+    display: block;
+    min-width: 132px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    padding: 6px !important;
+    flex: 0 !important;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.89);
+    &>div {
+        position: relative;
+        border-radius: 4px;
+        padding: 0 !important;
+        background-color: white;
+        overflow: hidden;
+        .cnc-name {
+            text-align: center;
+            height: 28px;
+            line-height: 28px;
+            display: flex;
+            align-items: center;
+            p {
+                flex: 1;
+                margin: 0;
+                text-align: center;
+                text-indent: -28px;
+            }
+            &.working {
+                color: #10e70b;
+            }
+            &.no-connect {
+                color: gray;
+            }
+            &.alarm {
+                color: #ff4858;
+                &+.error-detial {
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 100;
+                }
+            }
+            &.pink {
+                color: pink;
+                &+.error-detial {
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 100;
+                }
+            }
+            &.rose {
+                color: #FF33CC;
+                &+.error-detial {
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 100;
+                }
+            }
+            &.rest {
+                color: #efc608;
+            }
+            &.blue {
+                color: blue;
+            }
+            &.orange {
+                color: #FFA500;
+            }
+        }
+        .error-detial {
+            position: absolute;
+            left: 0;
+            top: 52px;
+            bottom: 0;
+            width: 100%;
+            z-index: -100;
+            display: none;
+            border-radius: 4px;
+            .equipment-name {
+                position: relative;
+                margin: 0;
+                text-align: center;
+                height: 24px;
+                line-height: 24px;
+                font-size: 14px;
+                margin-bottom: 2px;
+                background-color: white;
+                color: #fa7070;
+                display: flex;
+                align-items: center;
+            }
+            .error-list {
+                font-size: 12px;
+                flex: 1;
+                color: rgba(0, 0, 0, 0.87);
+                overflow-x: hidden;
+                overflow-y: auto;
+                background-color: white;
+                padding: 0 10px;
+                .error-item {
+                    span:first-child {
+                        margin-right: 4px;
+                    }
+                }
+                /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                    background-color: white;
+                }
+                /*定义滚动条的轨道，内阴影及圆角*/
+                &::-webkit-scrollbar-track {
+                    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                    border-radius: 4px;
+                    background-color: white;
+                }
+                /*定义滑块，内阴影及圆角*/
+                &::-webkit-scrollbar-thumb {
+                    /*width: 10px;*/
+                    height: 20px;
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15);
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+        .itemRow {
+            position: relative;
+            align-items: center;
+        }
+        img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 4px 0 4px;
+        }
+        .itemNum {
+            position: relative;
+            height: 48px;
+            text-align: center;
+            flex: 1;
+            h2 {
+                padding: 0;
+                margin: 0;
+                font-size: 16px;
+                font-weight: normal;
+                color: #3080fe;
+                padding-top: 8px;
+                line-height: inherit;
+                span {
+                    font-size: 12px;
+                    font-weight: normal;
+                    padding-left: 1px;
+                }
+            }
+            .itemNum-mark {
+                font-size: 12px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .item-mess {
+            display: flex;
+            padding: 0 10px;
+            justify-content: space-between;
+            p {
+                margin: 0;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+            }
+            .item-mess-name {
+                padding-right: 8px;
+                color: rgba(0, 0, 0, 0.53);
+            }
+            .item-mess-val {
+                color: rgba(0, 0, 0, 0.87);
+            }
+        }
+        &:hover {
+            box-shadow: 0 4px 12px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

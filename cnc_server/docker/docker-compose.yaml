@@ -1,0 +1,19 @@
+version: '3'
+services:
+  ks-dms:
+    image: docker-registry.imcloudep.com/imcloud_dms:v1
+    restart: always
+    environment:
+      - EUREKA_SERVER_ADDRESS=core-eureka
+
+  mongodb:
+      image: mongo
+      ports:
+        - "27017:27017"
+      volumes:
+        - /data/db:/data/db
+        - /data/configdb:/data/configdb
+networks:
+  default:
+    external:
+      name: imcloudep-external

@@ -1,0 +1,25 @@
+.con-head.main-con-head{
+    .next-search{
+        .next-search-lt{
+            border-radius: 6px 0 0 6px !important;
+            
+        }
+        .next-search-rt{
+            border-radius:0 6px  6px 0 !important;
+         
+        }
+        .next-comobobox{
+            border-radius: 6px 0 0 6px !important;
+         
+        }
+        button{
+            border-radius: 0 6px 6px 0 !important;
+            background-color: white !important;
+            border: 1px solid #DCDEE3 !important;
+            color: #333333 ;
+            i{
+                display: none;
+            }
+        }
+    }
+}

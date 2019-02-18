@@ -1,0 +1,164 @@
+.location-contents {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .container-block {
+        position: relative;
+        background-color: #f5f7fa;
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 20px;
+        min-height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .content-panel {
+        position: relative;
+        flex: 1;
+        background-color: #f5f7fa;
+        border-radius: 6px;
+        padding: 16px 20px;
+        overflow: hidden;
+        .mac-con {
+            position: relative;
+            // width: 1200px;
+            // min-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            overflow: hidden;
+            .mac-con-item {
+                position: relative;
+                .location-name {
+                    position: relative;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #333;
+                    padding: 0;
+                    margin: 0;
+                }
+                .mac-list {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .mac-list-item {
+                        position: relative;
+                        width: 288px;
+                        min-width: 288px;
+                        height: 250px;
+                        margin-right: 16px;
+                        margin-bottom: 16px;
+                        padding: 0 16px;
+                        background-color: white;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        &:nth-of-type(4n) {
+                            margin-right: 0;
+                        }
+                        .area {
+                            position: relative;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        .main-mess {
+                            position: relative;
+                            display: flex;
+                            height: 134px;
+                            padding-bottom: 24px;
+                            border-bottom: 1px dashed rgba(0, 0, 0, 0.27);
+                            .chrats {
+                                position: relative;
+                                width: 110px;
+                                height: 110px;
+                            }
+                            .main-mess-list {
+                                position: relative;
+                                flex: 1;
+                                height: 110px;
+                                padding: 1px 0;
+                                &>li {
+                                    position: relative;
+                                    height: 27px;
+                                    padding-left: 28px;
+                                    font-size: 12px;
+                                    display: flex;
+                                    align-items: center;
+                                    .status {
+                                        padding-right: 10px;
+                                    }
+                                    .persent {
+                                        display: inline-block;
+                                        width: 40px;
+                                    }
+                                    .num {
+                                        font-size: 14px;
+                                        color: rgba(0, 0, 0, 0.87)
+                                    }
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        left: 14px;
+                                        width: 8px;
+                                        height: 8px;
+                                        border-radius: 50%;
+                                        background-color: #2bcda2;
+                                    }
+                                    &:nth-of-type(2):after {
+                                        background-color: #ffbd0d;
+                                    }
+                                    &:nth-of-type(3):after {
+                                        background-color: #ff6565;
+                                    }
+                                    &:nth-of-type(4):after {
+                                        background-color: #e4e4e4;
+                                    }
+                                }
+                            }
+                        }
+                        .total-product {
+                            position: relative;
+                            height: 76px;
+                            padding: 0;
+                            margin: 0;
+                            text-align: center;
+                            font-size: 32px;
+                            color: #353e69;
+                            font-weight: 600;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            &:after {
+                                content: '生产总量';
+                                font-size: 12px;
+                                font-weight: normal;
+                                color: rgba(0, 0, 0, 0.53);
+                                margin-top: 6px;
+                            }
+                        }
+                        &:hover,
+                        &.active {
+                            transition: 0.3s;
+                            box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.08);
+                            transform: translateY(6px);
+                            border-top: 6px solid #3aa1ff;
+                            .area {
+                                height: 34px;
+                                line-height: 34px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 下拉框的高度
+.sel{
+    height: 31px;
+    border: 1px solid #dcdee3;
+    border-radius: 4px;
+}

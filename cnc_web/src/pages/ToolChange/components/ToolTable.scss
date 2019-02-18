@@ -1,0 +1,55 @@
+.ChiPpnWH94RQa9VngHrWM{
+    font-size: 14px !important;
+}
+.UbpLT6or4D8IiVzdN8tgR{
+    font-size: 14px !important;
+}
+.UbpLT6or4D8IiVzdN8tgR{
+    font-size: 14px !important;
+}
+.y-table{
+    // width: 100%;
+    overflow: auto;
+    padding-bottom: 60px;
+}
+// ._1bN5VNfsvzZZJH0jR4Rqg9{
+//     width: 2000px;
+// }
+.y-pagination{
+    margin-top: 60px;
+}
+.load{
+    line-height: 28px;
+    padding-left: 20px;
+    color: #fff;
+    position: fixed;
+    background-color: #2879eb;
+    padding: 4px 10px;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 6;
+}
+.load i{
+    display: inline-block; 
+    height: 1em; line-height: 1;
+    text-align: left;
+    vertical-align: -.25em;
+    overflow: hidden;
+    font-style: normal;
+    margin-left: 5px;
+}
+.load i::before {
+    display: block;
+    content: '...\A..\A.';
+    white-space: pre-wrap;   /* 也可以是white-space: pre */
+    animation: dot 3s infinite step-start both;
+}
+@keyframes dot {
+    33% { transform: translateY(-2em); }
+    66% { transform: translateY(-1em); }
+}
+.y-table-max3{
+    overflow: auto !important;
+}

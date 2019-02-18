@@ -1,0 +1,16 @@
+1. 安装mongod
+docker-compose -f docker-compose-mongodb.yml up -d
+
+2. 在根目录运行：
+docker build -t imcloud_dms:v1 .
+
+3. 在docker目录运行：
+docker-compose -f docker-compose-dms.yml up -d
+
+
+
+4. 静态资源：
+/etc/nginx/conf.d
+
+5. 数据库： /opt/imcloudep/dockercompose-db
+docker-compose -f docker-compose-mongodb.yml up -d

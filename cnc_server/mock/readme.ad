@@ -1,0 +1,4 @@
+1. 先导出device.
+2. 运行ReplaceId.js把_id去掉。
+
+3. db.getCollection('device').insertMany([]);

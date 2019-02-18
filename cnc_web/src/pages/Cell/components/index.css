@@ -1,0 +1,136 @@
+.y-table-max{
+    display: flex;
+    /* flex: 1; */
+    overflow: hidden;
+    min-height: 500px;
+    position: relative;
+}
+.y-max-l{
+    min-width: 60%;
+}
+.y-max-r{
+    flex: 1;
+    margin-left: 11px;
+}
+.y-max-r ul{
+    margin-top: 1px;
+    overflow: auto;
+    height: 100%;
+    padding: 10px 0;
+}
+.y-max-r ul li{
+ display: flex;
+    margin-left: 1px;
+}
+.y-max-r ul li span{
+    width: 50%;
+    border: 1px solid #333;
+    margin-left: -1px;
+    padding: 3px;
+    margin-top: -1px;
+}
+.y-max-r2{
+    margin-left: 21px;
+}
+
+.active{
+    color: #333
+}
+
+canvas{
+    height: 200px;
+}
+.y-main-container{
+    overflow: auto;
+}
+.y-main-container .next-tabs-top{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.y-main-container .next-tabs-bar{
+    min-height: 48px;
+}
+.y-main-container .next-tabs-content{
+    flex: 1;
+    overflow: auto;
+}
+.y-main-container .next-tabs-content >div{
+   height: 100%;
+}
+.y-main-container .next-tabs-content{
+    overflow: hidden;
+}
+.y-main-container .next-tabs-content .next-tabs-tabpane:nth-child(2){
+    /* padding-bottom: 60px; */
+}
+.y-main-container .next-tabs-content .next-tabs-tabpane:nth-child(1){
+    padding-bottom: 32px;
+}
+.Block-max{
+    overflow: auto !important;
+}
+.Block-text{
+    display: flex;
+    margin: 0;
+}
+.Block-text span{
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 0;
+    position: relative;
+    height: 28px;
+}
+.Block-text span:first-child{
+    background: #ccc;
+    margin-left: 250px;
+   
+}
+.Block-text span:first-child::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    top: 0;
+    border: 1px solid #EEEFF3;
+    border-right: none;
+    border-bottom: none;
+}
+.Block-text span:last-child{
+
+    background: #f4f4f4;
+}
+/* .Block-text span:last-child::after{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    right: -300px;
+    top: 0;
+    border: 1px solid #EEEFF3;
+    border-left: none;
+    border-bottom: none; 
+} */
+/* .Block-text span:last-child::before{
+    content: "";
+    position: absolute;
+    width: 101px;
+    height: 100%;
+    right: -201px;
+    top: 0;
+    border: 1px solid #EEEFF3;
+    border-top: none;
+    border-bottom: none;
+} */
+.y-fs{
+    color: #2077FF;
+}
+/* .Block-text ~ .next-table .next-table-body{
+    overflow: hidden;
+} */
+.hd-Block-text span:first-child{
+   border-right: 298px solid #f4f4f4;
+}

@@ -1,0 +1,66 @@
+div,p{
+    margin: 0;
+    padding: 0;
+}
+.fault{
+    // position: fixed;
+    min-width: 120px;
+    margin: 0 auto;
+    padding: 0 18px;
+    // left: 50%;
+    // top: 5px;
+    // margin-left: -60px;
+    height: 50px;
+    border-radius: 4px;
+    background: #fcda52;
+    text-align: center;
+    animation: am 1s 0.5s 2;
+    font-size: 12px;
+    color: #fff;
+    z-index: 99;
+    position: relative;
+    overflow: hidden;
+}
+.fault p{
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+}
+.fault span{
+    font-size: 16px;
+    color: #ff4858;
+}
+@keyframes am{
+    0% {
+        transform: scale3d(1, 1, 1);
+    }	
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.remo{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: #fcda52;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+}
+.remo:hover{
+    color: #464646;
+}
